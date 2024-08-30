@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy-Medium";
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 530px), (max-height: 750px) {
+    body {
+        display: none;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    -moz-appearance: textfield;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+select {
+    cursor: pointer;
+}
+
+:root {
+    --loader-border: 0.4rem;
+}
+
+.loader-wrapper {
+    height: 30rem;
+    width: 30rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+
+.loader {
+    height: 3rem;
+    width: 3rem;
+    background-color: transparent;
+    
+    border-radius: 50%; 
+    border: var(--loader-border) solid rgb(226, 226, 226);
+    border-top: var(--loader-border) solid #ffea4b;
+    
+    animation-name: anime;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    rotate: 0deg;
+}
+
+@keyframes anime {
+    0% {
+        rotate: 0deg;
+    }
+    20% {
+        border-top: var(--loader-border) solid 	#ffc63a ;
+    }
+    40% {
+        border-top: var(--loader-border) solid #ee9024;
+    }
+    60% {
+        border-top: var(--loader-border) solid #ef532c;
+    }
+    80% {
+        border-top: var(--loader-border) solid #c11943;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}

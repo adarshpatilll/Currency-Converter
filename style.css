@@ -10,11 +10,11 @@ html, body {
     width: 100%;
 }
 
-@media screen and (max-width: 530px), (max-height: 750px) {
+/*@media screen and (max-width: 530px), (max-height: 750px) {
     body {
         display: none;
     }
-}
+}*/
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
